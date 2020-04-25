@@ -69,7 +69,7 @@ app.put("/repositories/:id",validateRepositoryId, (request, response) => {
 
 });
 
-app.delete("/repositories/:id",validateRepositoryId, (request, response) => {
+app.delete("/repositories/:id", (request, response) => {
   // TODO
   const { id } = request.params;
   const repositoryIndex = repositories.findIndex(repository => repository.id === id);
@@ -85,7 +85,7 @@ app.delete("/repositories/:id",validateRepositoryId, (request, response) => {
 
 });
 
-app.post("/repositories/:id/like",validateRepositoryId, (request, response) => {
+app.post("/repositories/:id/like", (request, response) => {
   // TODO
   const { id } = request.params;
   const repositoryIndex = repositories.findIndex(repository => repository.id === id);
